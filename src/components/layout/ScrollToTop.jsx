@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUp, MessageCircle } from 'lucide-react';
+import { ChevronUp, MessageCircle } from 'lucide-react';
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,34 +28,29 @@ export default function ScrollToTop() {
 
   return (
     <>
-      {/* Floating WhatsApp Button with Red Badge */}
+      {/* Floating WhatsApp Button */}
       <a
         href="https://wa.me/919670111167?text=Hello%20Startup%20Cafe!%20I'm%20reaching%20out%20from%20your%20website%20to%20make%20an%20inquiry."
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 z-[100] w-14 h-14 rounded-full bg-[#25D366] text-white shadow-[0_4px_12px_rgba(0,0,0,0.15)] hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center relative group"
+        className="fixed bottom-8 right-8 z-[100] p-4 rounded-full bg-gradient-to-r from-emerald-500 to-green-600 text-white shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:shadow-[0_0_30px_#10b981] hover:scale-110 active:scale-95 transition-all duration-300 group flex items-center justify-center"
         aria-label="Contact on WhatsApp"
       >
-        <MessageCircle className="w-7 h-7 stroke-[2.2]" />
-        
-        {/* Red Notification Badge */}
-        <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#FF3B30] text-white text-[11px] font-bold rounded-full flex items-center justify-center border-2 border-white shadow-sm">
-          1
-        </span>
+        <MessageCircle className="w-6 h-6" />
       </a>
 
-      {/* Scroll to Top Bare Arrow Button */}
+      {/* Scroll to Top Button */}
       <AnimatePresence>
         {isVisible && (
           <motion.button
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.5 }}
             onClick={scrollToTop}
-            className="fixed bottom-[108px] right-[46px] z-[100] text-[#0a7c5b] hover:text-[#065c43] hover:-translate-y-1 active:scale-95 transition-all duration-300 flex items-center justify-center p-1"
+            className="fixed bottom-24 right-8 z-[100] p-4 rounded-full bg-gradient-to-r from-neon-purple to-neon-blue text-white shadow-[0_0_20px_rgba(176,38,255,0.4)] hover:shadow-[0_0_30px_#00f0ff] hover:scale-110 active:scale-95 transition-all duration-300 group"
             aria-label="Scroll to top"
           >
-            <ArrowUp className="w-7 h-7 stroke-[2.8]" />
+            <ChevronUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform duration-300" />
           </motion.button>
         )}
       </AnimatePresence>
