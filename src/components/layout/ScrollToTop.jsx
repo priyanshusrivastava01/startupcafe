@@ -29,13 +29,10 @@ export default function ScrollToTop() {
   return (
     <>
       {/* Floating WhatsApp Button with Red Badge */}
-      <motion.a
+      <a
         href="https://wa.me/919670111167?text=Hello%20Startup%20Cafe!%20I'm%20reaching%20out%20from%20your%20website%20to%20make%20an%20inquiry."
         target="_blank"
         rel="noopener noreferrer"
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.5, duration: 0.3 }}
         className="fixed bottom-8 right-8 z-[100] w-14 h-14 rounded-full bg-[#25D366] text-white shadow-[0_4px_12px_rgba(0,0,0,0.15)] hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center relative group"
         aria-label="Contact on WhatsApp"
       >
@@ -45,7 +42,7 @@ export default function ScrollToTop() {
         <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#FF3B30] text-white text-[11px] font-bold rounded-full flex items-center justify-center border-2 border-white shadow-sm">
           1
         </span>
-      </motion.a>
+      </a>
 
       {/* Scroll to Top Bare Arrow Button */}
       <AnimatePresence>
