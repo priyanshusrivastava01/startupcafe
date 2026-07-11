@@ -49,7 +49,7 @@ export default function FranchiseSupport() {
             <h3 className="text-xl md:text-2xl font-bold text-white mb-4">Ready to Lead?</h3>
             <p className="text-white/80 mb-6 text-xs md:text-sm">Download our complete franchise brochure to see the full list of support services.</p>
             <a 
-              href="/startcafe.co.in.pdf" 
+              href="/StartUp%20Cafe%20PDF.pdf" 
               download 
               className="inline-block px-6 py-3 bg-white text-black font-bold rounded-xl hover:scale-105 transition-transform text-sm md:text-base"
             >
